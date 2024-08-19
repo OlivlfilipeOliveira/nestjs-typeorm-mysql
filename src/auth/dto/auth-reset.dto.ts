@@ -1,10 +1,9 @@
-import { IsJWT, IsString } from "class-validator";
+import { IsJWT, IsString } from 'class-validator';
 
-export class AuthResetDTO{
+export class AuthResetDTO {
+  @IsString()
+  password: string;
 
-    @IsString()
-    password: string;
-
-    @IsJWT()
-    token: string;
+  @IsJWT()
+  token: string;
 }
